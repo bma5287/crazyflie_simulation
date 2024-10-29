@@ -60,7 +60,7 @@ class CamProcessor:
        
         mask_overlay = np.zeros_like(cv_image,dtype=np.uint8)
 
-        for det,seg in zip(detections.boxes,detections.masks):
+        for ii,det in enumerate(detections.boxes):
             class_id = int(det.cls)
             class_name = self.detector.names[class_id] + " Wall"
             confidence = det.conf.item()
@@ -120,9 +120,9 @@ class CamProcessor:
                 )
 
                 ### DRAW MASK
-                if seg is not None:
-                    print()
-                    mask = seg.data.cpu().numpy()[0]
+                if detections.masks is not None:
+
+                    mask = detections.masks[ii].data.cpu().numpy()[0]
 
                     # Resize mask to fit the image
                     mask_resized = cv2.resize(mask, (cv_image.shape[1], cv_image.shape[0]))

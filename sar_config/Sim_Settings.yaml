@@ -7,8 +7,8 @@ GROUND_SETTINGS:
 SIM_SETTINGS:
   GUI_Flag: True
   Pause_Flag: False
-  Sim_Speed: 0.3
-  Sim_Slowdown_Speed: 0.1
+  Sim_Speed: 0.5
+  Sim_Slowdown_Speed: 0.5
   Landing_Slowdown_Flag: False
   Vicon_Delay: 15 # [ms]
 

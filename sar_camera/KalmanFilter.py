@@ -34,7 +34,7 @@ class UKFNode:
         self.ukf.Q = np.diag([0.01, 0.05])
 
         # Measurement Noise Covariance
-        self.ukf.R = np.diag([0.05])
+        self.ukf.R = np.diag([0.1])
 
         
 

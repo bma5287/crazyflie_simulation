@@ -35,10 +35,10 @@ void bboxCallback(const sar_msgs::BoundingBoxArray::ConstPtr& msg)
 
         marker.color.a = 0.5;  // Transparency
         marker.color.r = 0.0;
-        marker.color.g = 1.0;
-        marker.color.b = 0.0;
+        marker.color.g = 0.5;
+        marker.color.b = 1.0;
 
-        marker.lifetime = ros::Duration(0.5);
+        marker.lifetime = ros::Duration(10.0);
 
         marker_array.markers.push_back(marker);
     }
